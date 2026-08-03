@@ -1,0 +1,441 @@
+Python 3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\tnave\OneDrive\Desktop\cp2\cp2_code.py
+
+=== ARRIVAL DELAY — full metrics ===
+
+  Linear
+    Train_RMSE      50.992601
+    Train_MAE       23.739868
+    Train_R2        0.011152
+    Test_RMSE       50.481705
+    Test_MAE        23.701998
+    Test_R2         0.010725
+
+  Tree
+    Train_RMSE      0.014380
+    Train_MAE       0.000021
+    Train_R2        1.000000
+    Test_RMSE       74.380351
+    Test_MAE        32.425094
+    Test_R2         -1.147660
+
+  GBR
+    Train_RMSE      50.479815
+    Train_MAE       23.230323
+    Train_R2        0.030940
+    Test_RMSE       49.967780
+    Test_MAE        23.205068
+    Test_R2         0.030765
+
+  Random Forest
+    Train_RMSE      45.151064
+    Train_MAE       21.696907
+    Train_R2        0.224733
+    Test_RMSE       49.873264
+    Test_MAE        22.860107
+    Test_R2         0.034428
+
+  XGBoost
+    Train_RMSE      49.539572
+    Train_MAE       22.683716
+    Train_R2        0.066703
+    Test_RMSE       49.495971
+    Test_MAE        22.771992
+    Test_R2         0.048982
+
+Best arrival model by Test R2: XGBoost
+
+=== DEPARTURE DELAY — full metrics ===
+
+  Linear
+    Train_RMSE      48.827355
+    Train_MAE       20.713214
+    Train_R2        0.011403
+    Test_RMSE       48.541676
+    Test_MAE        20.704367
+    Test_R2         0.011209
+
+  Tree
+    Train_RMSE      0.002494
+    Train_MAE       0.000003
+    Train_R2        1.000000
+    Test_RMSE       71.990041
+    Test_MAE        26.981860
+    Test_R2         -1.174803
+
+  GBR
+    Train_RMSE      48.390031
+    Train_MAE       20.150060
+    Train_R2        0.029032
+    Test_RMSE       48.119144
+    Test_MAE        20.152496
+    Test_R2         0.028348
+
+  Random Forest
+    Train_RMSE      42.912090
+    Train_MAE       18.747439
+    Train_R2        0.236424
+    Test_RMSE       48.419767
+    Test_MAE        19.910909
+    Test_R2         0.016169
+
+  XGBoost
+    Train_RMSE      47.508224
+    Train_MAE       19.581127
+    Train_R2        0.064097
+    Test_RMSE       47.775425
+    Test_MAE        19.674227
+    Test_R2         0.042179
+
+Best departure model by Test R2: XGBoost
+
+Arrival delay classification balance (Train):
+ARR_DELAY
+0    82.32
+1    17.68
+Name: proportion, dtype: float64 %
+
+Departure delay classification balance (Train):
+DEP_DELAY
+0    82.49
+1    17.51
+Name: proportion, dtype: float64 %
+
+=== ARRIVAL DELAY CLASSIFICATION (>15 min) — full metrics ===
+
+  Logistic
+    Train_Accuracy  0.577925
+    Test_Accuracy   0.578031
+    Test_Precision  0.232142
+    Test_Recall     0.599167
+    Test_F1         0.334633
+    Test_ROC_AUC    0.615031
+
+  Tree
+    Train_Accuracy  1.000000
+    Test_Accuracy   0.745801
+    Test_Precision  0.279577
+    Test_Recall     0.276101
+    Test_F1         0.277828
+    Test_ROC_AUC    0.561493
+
+  GB
+    Train_Accuracy  0.620027
+    Test_Accuracy   0.619022
+    Test_Precision  0.261166
+    Test_Recall     0.629446
+    Test_F1         0.369162
+    Test_ROC_AUC    0.672360
+
+  Random Forest
+    Train_Accuracy  0.691547
+    Test_Accuracy   0.659270
+    Test_Precision  0.283636
+    Test_Recall     0.605630
+    Test_F1         0.386338
+    Test_ROC_AUC    0.695368
+
+  XGBoost
+    Train_Accuracy  0.660154
+    Test_Accuracy   0.655617
+    Test_Precision  0.287521
+    Test_Recall     0.639107
+    Test_F1         0.396613
+    Test_ROC_AUC    0.706231
+
+Best ARRIVAL classification model by Test F1: XGBoost
+
+Classification Report (ARRIVAL, XGBoost):
+              precision    recall  f1-score   support
+
+           0       0.89      0.66      0.76    479556
+           1       0.29      0.64      0.40    103205
+
+    accuracy                           0.66    582761
+   macro avg       0.59      0.65      0.58    582761
+weighted avg       0.79      0.66      0.69    582761
+
+
+=== DEPARTURE DELAY CLASSIFICATION (>15 min) — full metrics ===
+
+  Logistic
+    Train_Accuracy  0.593031
+    Test_Accuracy   0.593085
+    Test_Precision  0.241314
+    Test_Recall     0.612121
+    Test_F1         0.346162
+    Test_ROC_AUC    0.635897
+
+  Tree
+    Train_Accuracy  1.000000
+    Test_Accuracy   0.748703
+    Test_Precision  0.281998
+    Test_Recall     0.276850
+    Test_F1         0.279400
+    Test_ROC_AUC    0.563159
+
+  GB
+    Train_Accuracy  0.629910
+    Test_Accuracy   0.629327
+    Test_Precision  0.270444
+    Test_Recall     0.651750
+    Test_F1         0.382266
+    Test_ROC_AUC    0.692628
+
+  Random Forest
+    Train_Accuracy  0.692749
+    Test_Accuracy   0.665322
+    Test_Precision  0.290542
+    Test_Recall     0.625500
+    Test_F1         0.396781
+    Test_ROC_AUC    0.707940
+
+  XGBoost
+    Train_Accuracy  0.671726
+    Test_Accuracy   0.668135
+    Test_Precision  0.297932
+    Test_Recall     0.653086
+    Test_F1         0.409194
+    Test_ROC_AUC    0.721963
+
+Best DEPARTURE classification model by Test F1: XGBoost
+
+Classification Report (DEPARTURE, XGBoost):
+              precision    recall  f1-score   support
+
+           0       0.90      0.67      0.77    480211
+           1       0.30      0.65      0.41    102550
+
+    accuracy                           0.67    582761
+   macro avg       0.60      0.66      0.59    582761
+weighted avg       0.79      0.67      0.71    582761
+
+
+=== CANCELLATION — full metrics ===
+
+  Logistic
+    Train_Accuracy  0.583454
+    Test_Accuracy   0.582392
+    Test_Precision  0.039180
+    Test_Recall     0.630465
+    Test_F1         0.073776
+    Test_ROC_AUC    0.629461
+
+  Tree
+    Train_Accuracy  0.999999
+    Test_Accuracy   0.963505
+    Test_Precision  0.301420
+    Test_Recall     0.291003
+    Test_F1         0.296120
+    Test_ROC_AUC    0.636365
+
+  GB
+    Train_Accuracy  0.789514
+    Test_Accuracy   0.788593
+    Test_Precision  0.074384
+    Test_Recall     0.612901
+    Test_F1         0.132667
+    Test_ROC_AUC    0.775053
+
+  Random Forest
+    Train_Accuracy  0.913225
+    Test_Accuracy   0.905382
+    Test_Precision  0.164737
+    Test_Recall     0.635519
+    Test_F1         0.261650
+    Test_ROC_AUC    0.868494
+
+  XGBoost
+    Train_Accuracy  0.844231
+    Test_Accuracy   0.841747
+    Test_Precision  0.111962
+    Test_Recall     0.721190
+    Test_F1         0.193833
+    Test_ROC_AUC    0.868194
+
+Best cancellation model by Test F1: Tree
+
+Classification Report (best cancellation model):
+              precision    recall  f1-score   support
+
+         0.0       0.98      0.98      0.98    584172
+         1.0       0.30      0.29      0.30     15828
+
+    accuracy                           0.96    600000
+   macro avg       0.64      0.64      0.64    600000
+weighted avg       0.96      0.96      0.96    600000
+
+Confusion Matrix:
+[[573497  10675]
+ [ 11222   4606]]
+
+=== TABLE 1: Dataset Descriptive Statistics ===
+Total flights (post date filter)                   3,000,000
+Date range                                         2019-01-01 to 2023-08-31
+Raw columns (source)                               32
+Columns after cleaning/engineering                 28
+Cancelled flights                                  79,140
+Diverted flights                                   7,056
+Delay-eligible flights (not cancelled/diverted)    2,913,804
+Arrival Delay — train rows                         2,331,041
+Arrival Delay — test rows                          582,761
+Departure Delay — train rows                       2,331,043
+Departure Delay — test rows                        582,761
+Cancellation — train rows                          2,400,000
+Cancellation — test rows                           600,000
+Cancellation rate (full dataset)                   2.64%
+Arrival Delay skewness                             10.29
+Departure Delay skewness                           11.52
+
+=== TABLE 2: Leakage Exclusion Table ===
+
+Column:            DEP_DELAY
+Reason:            Only known after the flight departs; near-deterministic predictor of ARR_DELAY (target for arrival task)
+Excluded from:     Arrival Delay, Departure Delay (target)
+
+Column:            ARR_TIME(MINS)
+Reason:            Actual arrival time — only known after the flight lands
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            DEP_TIME(MINS)
+Reason:            Actual departure time — only known after departure occurs
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            WHEELS_OFF(MINS)
+Reason:            Recorded once the aircraft leaves the gate
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            WHEELS_ON(MINS)
+Reason:            Recorded once the aircraft lands
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            TAXI_IN
+Reason:            Ground time after landing — post-arrival only
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            TAXI_OUT
+Reason:            Ground time before takeoff — only known once departure has begun
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            FLIGHT_DURATION(MINS)
+Reason:            Total flight duration — only fully known after landing
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            AIR_TIME
+Reason:            Time airborne — only known after landing
+Excluded from:     Arrival Delay, Departure Delay
+
+Column:            DELAY_DUE_CARRIER / WEATHER / NAS / SECURITY / LATE_AIRCRAFT
+Reason:            Delay-cause breakdown is only assigned after a delay has occurred and been categorized
+Excluded from:     Arrival Delay, Departure Delay, Cancellation
+
+Column:            CANCELLATION_CODE
+Reason:            Only populated for already-cancelled flights; would leak the cancellation outcome itself
+Excluded from:     Cancellation
+
+Cancellation class balance:
+CANCELLED
+0.0    2920860
+1.0      79140
+Name: count, dtype: int64
+CANCELLED
+0.0    97.36
+1.0     2.64
+Name: count, dtype: float64%
+-> Justifies class_weight='balanced' / scale_pos_weight, and using F1/ROC-AUC over raw accuracy as the cancellation selection metric.
+
+Arrival delay skewness: 10.293
+Departure delay skewness: 11.516
+-> Heavy right skew: most flights on time, a long tail of severe delays. This is why RMSE >> MAE (RMSE penalizes the tail harder), and why R2 is structurally hard to raise from pre-departure features alone -- nearly all the variance to explain lives in that thin, hard-to-predict tail.
+
+Top correlations with ARR_DELAY (retained features only):
+SCHEDULE_DEP_TIME(MINS)     0.090237
+SCHEDULE_ARR_TIME(MINS)     0.072717
+FL_YEAR                     0.042540
+AIRLINE                    -0.017011
+ORIGIN                      0.009134
+DEST                       -0.006324
+FL_DAY                      0.003436
+FL_MONTH                    0.003196
+DISTANCE_(MILES)            0.002531
+SCHEDULED_DURATION(MINS)   -0.001880
+Name: ARR_DELAY, dtype: float64
+
+Top correlations with DEP_DELAY (retained features only):
+SCHEDULE_DEP_TIME(MINS)     0.093106
+SCHEDULE_ARR_TIME(MINS)     0.073168
+FL_YEAR                     0.040212
+SCHEDULED_DURATION(MINS)    0.024545
+DISTANCE_(MILES)            0.022428
+ORIGIN                      0.012173
+AIRLINE                     0.006126
+FL_DAY                      0.003490
+DEST                        0.001530
+FL_MONTH                    0.000595
+Name: DEP_DELAY, dtype: float64
+-> No feature should show |r| anywhere near 1.0 here. If one does, trace it back -- that's a sign a leaky column slipped through the exclusion list. Weak, spread-out correlations (typically |r| < 0.15) are the expected, honest signature of a properly leakage-free pre-departure feature set, and directly explain your low R2.
+
+EDA figures saved to 'C:\Users\tnave\OneDrive\Desktop\trial_cp2_outputs\figures/' (4 files, prefixed eda_)
+
+
+Warning (from warnings module):
+  File "C:\Users\tnave\OneDrive\Desktop\cp2\cp2_code.py", line 646
+    fig.tight_layout()
+UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+
+Warning (from warnings module):
+  File "C:\Users\tnave\OneDrive\Desktop\cp2\cp2_code.py", line 647
+    fig.savefig(os.path.join(FIG_DIR, name), dpi=300, bbox_inches="tight")
+UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
+
+Arrival delay classification — best model (XGBoost) fit diagnosis: Good Fit
+Departure delay classification — best model (XGBoost) fit diagnosis: Good Fit
+
+Arrival classification results:
+                Train_Accuracy  Test_Accuracy  ...   Test_F1  Test_ROC_AUC
+Logistic             0.577925       0.578031  ...  0.334633      0.615031
+Tree                 1.000000       0.745801  ...  0.277828      0.561493
+GB                   0.620027       0.619022  ...  0.369162      0.672360
+Random Forest        0.691547       0.659270  ...  0.386338      0.695368
+XGBoost              0.660154       0.655617  ...  0.396613      0.706231
+
+[5 rows x 6 columns]
+
+Departure classification results:
+                Train_Accuracy  Test_Accuracy  ...   Test_F1  Test_ROC_AUC
+Logistic             0.593031       0.593085  ...  0.346162      0.635897
+Tree                 1.000000       0.748703  ...  0.279400      0.563159
+GB                   0.629910       0.629327  ...  0.382266      0.692628
+Random Forest        0.692749       0.665322  ...  0.396781      0.707940
+XGBoost              0.671726       0.668135  ...  0.409194      0.721963
+
+[5 rows x 6 columns]
+
+All metrics CSVs and 21 figures saved to 'C:\Users\tnave\OneDrive\Desktop\trial_cp2_outputs/'
+Arrival results:
+                Train_RMSE  Train_MAE  Train_R2  Test_RMSE   Test_MAE   Test_R2
+Linear          50.992601  23.739868  0.011152  50.481705  23.701998  0.010725
+Tree             0.014380   0.000021  1.000000  74.380351  32.425094 -1.147660
+GBR             50.479815  23.230323  0.030940  49.967780  23.205068  0.030765
+Random Forest   45.151064  21.696907  0.224733  49.873264  22.860107  0.034428
+XGBoost         49.539572  22.683716  0.066703  49.495971  22.771992  0.048982
+
+Departure results:
+                Train_RMSE  Train_MAE  Train_R2  Test_RMSE   Test_MAE   Test_R2
+Linear          48.827355  20.713214  0.011403  48.541676  20.704367  0.011209
+Tree             0.002494   0.000003  1.000000  71.990041  26.981860 -1.174803
+GBR             48.390031  20.150060  0.029032  48.119144  20.152496  0.028348
+Random Forest   42.912090  18.747439  0.236424  48.419767  19.910909  0.016169
+XGBoost         47.508224  19.581127  0.064097  47.775425  19.674227  0.042179
+
+Cancellation results:
+                Train_Accuracy  Test_Accuracy  ...   Test_F1  Test_ROC_AUC
+Logistic             0.583454       0.582392  ...  0.073776      0.629461
+Tree                 0.999999       0.963505  ...  0.296120      0.636365
+GB                   0.789514       0.788593  ...  0.132667      0.775053
+Random Forest        0.913225       0.905382  ...  0.261650      0.868494
+XGBoost              0.844231       0.841747  ...  0.193833      0.868194
+
+[5 rows x 6 columns]
