@@ -8,7 +8,9 @@ ________________________________________________________________________________
 
  **Dataset**
 
- **Source:** Bureau of Transportation Statistics (BTS)
+ **Source:** Kaggle
+
+ **Link:** https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset-2019-2023?select=flights_sample_3m.csv
 
  **Coverage:**
 
@@ -17,6 +19,7 @@ ________________________________________________________________________________
 -
     January 2019 - August 2023
 
+**Note:** The raw dataset ('flights_sample_3m.csv') is not inlcuded in this repository due to file size limits.
 _________________________________________________________________________________________________________________
 
 **Project Objectives**
