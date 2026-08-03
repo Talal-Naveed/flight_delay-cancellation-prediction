@@ -1,0 +1,17 @@
+Metric,Value
+Total flights (post date filter),"3,000,000"
+Date range,2019-01-01 to 2023-08-31
+Raw columns (source),32
+Columns after cleaning/engineering,28
+Cancelled flights,"79,140"
+Diverted flights,"7,056"
+Delay-eligible flights (not cancelled/diverted),"2,913,804"
+Arrival Delay — train rows,"2,331,041"
+Arrival Delay — test rows,"582,761"
+Departure Delay — train rows,"2,331,043"
+Departure Delay — test rows,"582,761"
+Cancellation — train rows,"2,400,000"
+Cancellation — test rows,"600,000"
+Cancellation rate (full dataset),2.64%
+Arrival Delay skewness,10.29
+Departure Delay skewness,11.52
