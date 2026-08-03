@@ -380,16 +380,6 @@ Name: DEP_DELAY, dtype: float64
 EDA figures saved to 'C:\Users\tnave\OneDrive\Desktop\trial_cp2_outputs\figures/' (4 files, prefixed eda_)
 
 
-Warning (from warnings module):
-  File "C:\Users\tnave\OneDrive\Desktop\cp2\cp2_code.py", line 646
-    fig.tight_layout()
-UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
-
-Warning (from warnings module):
-  File "C:\Users\tnave\OneDrive\Desktop\cp2\cp2_code.py", line 647
-    fig.savefig(os.path.join(FIG_DIR, name), dpi=300, bbox_inches="tight")
-UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
-
 Arrival delay classification — best model (XGBoost) fit diagnosis: Good Fit
 Departure delay classification — best model (XGBoost) fit diagnosis: Good Fit
 
